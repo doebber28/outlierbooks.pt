@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-pt">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Privacidade | [Nome do Seu App]</title>
+    <title>Privacy Policy | [App Name]</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -15,29 +16,39 @@
             display: flex;
             justify-content: center;
         }
+
         .container {
             max-width: 800px;
             width: 90%;
             padding: 40px 20px;
         }
+
         h1 {
             border-bottom: 2px solid #000;
             padding-bottom: 10px;
             text-transform: uppercase;
             letter-spacing: 1px;
+            font-size: 1.8rem;
         }
+
         h2 {
             margin-top: 30px;
             text-transform: uppercase;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
+            border-left: 4px solid #000;
+            padding-left: 10px;
         }
-        p, li {
+
+        p,
+        li {
             font-size: 1rem;
-            color: #333;
+            color: #222;
         }
+
         ul {
             padding-left: 20px;
         }
+
         .footer {
             margin-top: 50px;
             border-top: 1px solid #eee;
@@ -45,66 +56,83 @@
             font-size: 0.8rem;
             color: #666;
         }
+
         a {
             color: #000;
             text-decoration: underline;
         }
+
         @media (max-width: 600px) {
             .container {
                 padding: 20px 15px;
             }
-            h1 { font-size: 1.5rem; }
+
+            h1 {
+                font-size: 1.5rem;
+            }
         }
     </style>
 </head>
+
 <body>
+    <div class="container">
+        <h1>Privacy Policy</h1>
+        <p><strong>Last Updated:</strong> March 29, 2026</p>
 
-<div class="container">
-    <h1>Política de Privacidade</h1>
-    <p><strong>Última atualização:</strong> 29 de Março de 2026</p>
+        <section>
+            <h2>1. Introduction</h2>
+            <p>This Privacy Policy describes how <strong>Outlier Books</strong> collects, uses, and shares your
+                information. By using our application, you agree to the terms outlined in this policy.</p>
+        </section>
 
-    <section>
-        <h2>1. Visão Geral</h2>
-        <p>Esta política descreve como o <strong>[Nome do Seu App]</strong> coleta, usa e protege suas informações. Nosso compromisso é com a transparência e a segurança dos seus dados.</p>
-    </section>
+        <section>
+            <h2>2. Data Collection & Authentication (Supabase)</h2>
+            <p>We use <strong>Supabase</strong> as our backend service provider for authentication and database
+                management:</p>
+            <ul>
+                <li><strong>Account Data:</strong> We collect your email address to create and manage your secure user
+                    profile.</li>
+                <li><strong>Data Security:</strong> Your data is stored in secure servers using industry-standard
+                    encryption protocols (HTTPS/SSL).</li>
+            </ul>
+        </section>
 
-    <section>
-        <h2>2. Coleta de Dados e Autenticação</h2>
-        <p>Utilizamos os serviços do <strong>Supabase</strong> para gestão de usuários e banco de dados:</p>
-        <ul>
-            <li><strong>Dados de Conta:</strong> Coletamos seu e-mail para criação de perfil e autenticação segura.</li>
-            <li><strong>Armazenamento:</strong> Suas informações são armazenadas em servidores seguros com criptografia de ponta a ponta.</li>
-        </ul>
-    </section>
+        <section>
+            <h2>3. Advertising (Google AdMob)</h2>
+            <p>To keep our services free, we display advertisements provided by <strong>Google AdMob</strong>:</p>
+            <ul>
+                <li><strong>Identifiers:</strong> Google may use unique device identifiers (such as IDFA on iOS or AAID
+                    on Android) to serve personalized ads based on your interests.</li>
+                <li><strong>Tracking Transparency (iOS):</strong> On Apple devices, we fully respect your choice
+                    regarding the App Tracking Transparency (ATT) prompt. If declined, only non-personalized ads will be
+                    shown.</li>
+                <li><strong>Third-Party Policy:</strong> For more details, please visit <a
+                        href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>.</li>
+            </ul>
+        </section>
 
-    <section>
-        <h2>3. Publicidade (Google AdMob)</h2>
-        <p>Para manter o aplicativo gratuito, exibimos anúncios via <strong>Google AdMob</strong>:</p>
-        <ul>
-            <li><strong>Identificadores:</strong> O Google pode utilizar identificadores exclusivos do seu dispositivo para veicular anúncios baseados em seus interesses.</li>
-            <li><strong>Privacidade iOS:</strong> Em dispositivos Apple, respeitamos sua escolha no pop-up de transparência (ATT). Se recusado, apenas anúncios não personalizados serão exibidos.</li>
-        </ul>
-    </section>
+        <section>
+            <h2>4. Data Deletion Rights</h2>
+            <p>In compliance with global privacy regulations (GDPR/LGPD), we ensure your right to data removal:</p>
+            <ul>
+                <li>You can permanently delete your account at any time through the <strong>Settings</strong> menu
+                    within the app.</li>
+                <li>Upon confirmation, all authentication data and associated records linked to your User ID in Supabase
+                    will be permanently erased from our servers.</li>
+            </ul>
+        </section>
 
-    <section>
-        <h2>4. Exclusão de Dados</h2>
-        <p>Em conformidade com a LGPD e as políticas das lojas de aplicativos, garantimos o seu direito à exclusão:</p>
-        <ul>
-            <li>Você pode deletar sua conta permanentemente através do menu <strong>Configurações</strong> dentro do aplicativo.</li>
-            <li>Ao confirmar a exclusão, todos os seus dados vinculados ao seu ID de usuário no Supabase serão removidos definitivamente.</li>
-        </ul>
-    </section>
+        <section>
+            <h2>5. Contact Information</h2>
+            <p>If you have any questions or requests regarding your privacy, please contact us at: <br>
+                <a href="support@outlierbooks.pt">support@outlierbooks.pt</a>
+            </p>
+        </section>
 
-    <section>
-        <h2>5. Contato</h2>
-        <p>Para dúvidas ou solicitações sobre seus dados, entre em contato via e-mail: <br>
-        <a href="mailto:seu-email@dominio.com">seu-email@dominio.com</a></p>
-    </section>
-
-    <div class="footer">
-        © 2026 [Nome do Seu App/Sua Empresa]. Todos os direitos reservados.
+        <div class="footer">
+            © 2026 OutlierBooks/Doebber Corp. All rights reserved.
+        </div>
     </div>
-</div>
-
 </body>
+
 </html>
