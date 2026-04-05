@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baixar Outlier Books</title>
+    <style>
+        body { 
+            font-family: sans-serif; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            background: #fff; 
+            color: #000;
+            text-align: center;
+        }
+        .loader { border: 4px solid #f3f3f3; border-top: 4px solid #000; border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite; margin: auto; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="loader"></div>
+        <p>Redirecionando para a loja...</p>
+        <p id="manual-link" style="display:none;">
+            Se não for redirecionado, <a href="#" id="store-link">clique aqui</a>.
+        </p>
+    </div>
+
+    <script>
+        const APPLE_STORE_URL = "https://apps.apple.com/app/idSEU_ID_AQUI"; 
+        const GOOGLE_PLAY_URL = "https://play.google.com/store/apps/details?id=com.doebber28.outlierbooks";
+        const DEFAULT_URL = "https://outlierbooks.pt"; // Caso alguém abra no PC
+
+        function redirect() {
+            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            let targetUrl = DEFAULT_URL;
+
+            // Detecta iOS (iPhone, iPad, iPod)
+            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                targetUrl = APPLE_STORE_URL;
+            } 
+            // Detecta Android
+            else if (/android/i.test(userAgent)) {
+                targetUrl = GOOGLE_PLAY_URL;
+            }
+
+            // Faz o redirecionamento
+            window.location.href = targetUrl;
+
+            // Se o redirecionamento demorar, mostra o link manual
+            setTimeout(() => {
+                document.getElementById('manual-link').style.display = 'block';
+                document.getElementById('store-link').href = targetUrl;
+            }, 2000);
+        }
+
+        window.onload = redirect;
+    </script>
+</body>
+</html>
